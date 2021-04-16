@@ -1,0 +1,5 @@
+@mixin gridColumnRepeatLayout($colNbr, $colGap) {
+    display:grid;
+    grid-template-columns: repeat($colNbr, 1fr);
+    column-gap:$colGap;
+}

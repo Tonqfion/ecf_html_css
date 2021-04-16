@@ -1,0 +1,32 @@
+html {
+    font-size:100%;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size:1.25rem;
+    line-height:1.5;
+    color:$writing-dark;
+}
+
+a {
+    text-decoration:none;
+    color:inherit;
+}
+
+h1 {
+    font-size:4.5rem;
+    color:$white;
+}
+
+h2 {
+    font-size:3rem;
+}
+
+h3 {
+    font-size:1.5rem;
+}
+
+.white {
+    color:$white;
+}
