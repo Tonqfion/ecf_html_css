@@ -1,0 +1,103 @@
+//Config Container
+
+.container {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  width: 100%;
+  margin: 0 auto;
+
+  @include large-phone {
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    max-width: 48rem;
+  }
+  @include tablet {
+    max-width: 62rem;
+  }
+  @include large-tablet {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    max-width: 75rem;
+  }
+  @include screen {
+    max-width: 83.75rem;
+  }
+}
+
+//Header and Footer
+header,
+footer,
+.students {
+  background-color: $orange;
+}
+
+//Header only
+
+.site-header {
+  position: sticky;
+  z-index: 999;
+}
+
+.site-header .container {
+  @include flex-display(row, center, space-between);
+}
+
+//footer only
+
+footer .container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+.legal-menu,
+.social-menu {
+    @include flex-display(column,center,space-around);
+}
+
+  @include flex-display(column, center, space-between);
+  div {
+    margin: 1rem;
+  }
+  @include tablet {
+    display: grid;
+    grid-template-areas: 
+    'a l'
+    'a s'
+    ;
+    .address-wrapper {
+        grid-area: a;
+    }
+    .legal-menu-wrapper {
+        grid-area: l;
+    }
+    .social-menu-wrapper {
+        grid-area: s;
+    }
+  }
+  @include screen {
+      grid-template-areas: initial;
+      grid-template-columns: 25rem 1fr 12.5rem;
+
+      
+  div {
+    margin: 0;
+  }
+      .address-wrapper,
+      .legal-menu-wrapper,
+      .social-menu-wrapper {
+          grid-area: initial;
+      }
+      .legal-menu,.social-menu {
+          flex-direction: row;
+      }
+      .legal-menu {
+          justify-content: center;
+          .legal-item:nth-of-type(1) {
+              margin-right: .625rem;
+          }
+          .legal-item:nth-of-type(2) {
+              margin-left: 0.625rem;
+          }
+      }
+
+
+
+  }
+}

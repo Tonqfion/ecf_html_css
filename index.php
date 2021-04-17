@@ -161,7 +161,7 @@
                         <div class="student-card">
                             <img src="img\francine.png" srcset="img\francine-2x.png" alt="Francine Auhi">
                             <div class="student-content">
-                                <h3 class="white">Francine Auhi</h3>
+                                <h3 class="student-title">Francine Auhi</h3>
                                 <p class="student-more">En savoir plus</p>
                             </div>
                         </div>
@@ -171,7 +171,7 @@
                         <div class="student-card">
                             <img src="img\ali.png" srcset="img\ali-2x.png" alt="Ali Korn">
                             <div class="student-content">
-                                <h3 class="white">Ali Korn</h3>
+                                <h3 class="student-title">Ali Korn</h3>
                                 <p class="student-more">En savoir plus</p>
                             </div>
                         </div>
@@ -181,7 +181,7 @@
                         <div class="student-card">
                             <img src="img\jean.png" srcset="img\jean-2x.png" alt="Jean Vascrit">
                             <div class="student-content">
-                                <h3 class="white">Jean Vascrit</h3>
+                                <h3 class="student-title">Jean Vascrit</h3>
                                 <p class="student-more">En savoir plus</p>
                             </div>
                         </div>
@@ -191,7 +191,7 @@
                         <div class="student-card">
                             <img src="img\lara.png" srcset="img\lara-2x.png" alt="Lara Velle">
                             <div class="student-content">
-                                <h3 class="white">Lara Velle</h3>
+                                <h3 class="student-title">Lara Velle</h3>
                                 <p class="student-more">En savoir plus</p>
                             </div>
                         </div>

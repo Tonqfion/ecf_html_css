@@ -1,5 +1,49 @@
+//Media Queries Mixins, cf variables for breakpoints value
+@mixin large-phone {
+    @media screen and (min-width: map-get($breakpoints,sm)) {
+        @content;
+    }
+ }
+
+ @mixin tablet {
+    @media screen and (min-width: map-get($breakpoints,md)) {
+        @content;
+    }
+ }
+
+ @mixin large-tablet {
+    @media screen and (min-width: map-get($breakpoints,lg)) {
+        @content;
+    }
+ }
+
+ @mixin screen {
+    @media screen and (min-width: map-get($breakpoints,xl)) {
+        @content;
+    }
+ }
+ @mixin large-screen {
+    @media screen and (min-width: map-get($breakpoints,xxl)) {
+        @content;
+    }
+ }
+
+
+
+
+//grid template mixins, 2 parameters : column numbers and gap value
+
 @mixin gridColumnRepeatLayout($colNbr, $colGap) {
     display:grid;
     grid-template-columns: repeat($colNbr, 1fr);
     column-gap:$colGap;
+}
+
+//mixin for flex display layout with direction, alignment, and justify-content variables
+
+@mixin flex-display($direction,$align,$justify) {
+    display:flex;
+    flex-direction:$direction;
+    align-items: $align;
+    justify-content: $justify;
 }

@@ -1,32 +1,79 @@
 html {
-    font-size:100%;
+  font-size: 100%;
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
-    font-size:1.25rem;
-    line-height:1.5;
-    color:$writing-dark;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: $writing-dark;
 }
 
 a {
-    text-decoration:none;
-    color:inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo,
+h1,
+h2,
+h3:not(.student-title) {
+  font-family: "Raleway", sans-serif;
+}
+
+.logo,
+h1,
+h2 {
+  font-weight: 700;
 }
 
 h1 {
-    font-size:4.5rem;
-    color:$white;
+    text-align: center;
+    font-size:3rem;
+    @include large-tablet {
+        font-size: 4.5rem;
+
+    }
 }
 
+.logo,
 h2 {
-    font-size:3rem;
+  font-size: 2.5rem;
+  @include large-tablet {
+      font-size:3rem
+  }
+  text-align: center;
 }
 
 h3 {
-    font-size:1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  &.student-title {
+    text-align: center;
+  }
 }
 
-.white {
-    color:$white;
+a p {
+    &.date {
+        
+    font-size:1rem;
+    color:$date-color;
+    }
+    &.student-more {
+        font-size: 1rem;
+    }
+}
+
+header,
+section.students,
+footer {
+  color: $white;
+}
+
+address {
+    font-style:normal;
+}
+
+.legal-menu {
+    font-size:1rem;
 }
