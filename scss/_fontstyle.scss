@@ -32,6 +32,7 @@ h1 {
     font-size:3rem;
     @include large-tablet {
         font-size: 4.5rem;
+        text-align:left;
 
     }
 }
@@ -65,9 +66,15 @@ a p {
 }
 
 header,
+section.jumbotron,
 section.students,
 footer {
   color: $white;
+}
+
+section.jumbotron .container .jumbotron-msg-wrapper a {
+  font-size:2.5rem;
+  font-weight:600;
 }
 
 address {

@@ -47,3 +47,10 @@
     align-items: $align;
     justify-content: $justify;
 }
+
+
+//White color font / orange background button / centered
+@mixin orange-button-link {
+    background-color:$orange;
+    color:$white;
+}
