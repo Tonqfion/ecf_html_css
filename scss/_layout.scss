@@ -5,6 +5,8 @@
   padding-right: 0.75rem;
   width: 100%;
   margin: 0 auto;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 
   @include large-phone {
     padding: 1.5rem 2rem 1.5rem 2rem;
@@ -14,8 +16,6 @@
     max-width: 62rem;
   }
   @include large-tablet {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
     max-width: 75rem;
   }
   @include screen {
@@ -101,42 +101,118 @@ footer .container {
 //Jumbo HomePage
 
 .jumbotron {
-  height: 80vh;
-  background-image: url("../img/macbook-bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  
+  position: relative;
+  height: 31.25rem;
+  background-color: black;
+  z-index: -10;
+  @include screen {
+    height: 43.75rem;
+  }
 
+  // un before pour pouvoir faire un fond qui est légèrement transparent de base (donc tend vers le noir du background-color du jumbotron)
+  &:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url("../img/macbook-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+    z-index: -9;
 
-  // Desktop version 
+    //On rend le pseudo élément opaque quand on atteint le breakpoint screen
+    @include screen {
+      opacity: 1;
+    }
+  }
+
+  // Container hauteur de son parent pour pouvoir positionner le message au centre de l'écran verticalement
+
+  .container {
+    height: 100%;
+    display: flex;
+    .jumbotron-msg-wrapper {
+      @include flex-display(column, center, center);
+    }
+  }
+
+  a {
+    @include orange-button-link;
+    padding: 1.25rem 2rem;
+  }
+
+  // Desktop version du jumbotron - on place le container en relatif pour pouvoir positionner le msg en absolute (positionnement différent entre petit écran et haute résolution
   @include screen {
     .container {
       position: relative;
-      width: 100%;
       height: 100%;
     }
     .jumbotron-msg-wrapper {
+      background-color: $jumbotron-msg-bg-color;
       padding-left: 1.5rem;
       padding-top: 1.5rem;
       padding-bottom: 1.5rem;
-      padding-right:1.5rem;
       position: absolute;
-      left: 10%;
+      left: 20%;
       top: 20%;
-      background-color: $jumbotron-msg-bg-color;
 
       a {
-        @include orange-button-link;
-        padding: 1.25rem 2rem;
-        float: right;
+        align-self: flex-end;
+        margin-right: 1.5rem;
+      }
+
+      @include large-screen {
+        left: 30%;
+        top: 33%;
       }
     }
   }
-  @include large-screen {
-    left: 25%;
-    top: 33%;
+}
 
+// actualités homepage et modules homepages
+
+section.news .news-grid,
+section.modules .modules-grid {
+  display: grid;
+  align-items: center;
+  row-gap: 2rem;
+}
+
+// cards homepage et modules
+
+.over-card-link .card {
+  margin: auto;
+  box-shadow: 0px 0px 48px #00000029;
+  border-radius: 4px;
+  max-width: 25.25rem;
+  .card-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    h3,
+    .date {
+      margin-bottom: 1rem;
+    }
+    .read-more-container,
+    .date {
+      margin-top: 1.5rem;
+    }
+
+    .read-more-container {
+      border-radius: 0px 0px 4px 4px;
+      @include orange-button-link;
+      @include flex-display(row, center, center);
+      margin-left: -1rem;
+      margin-right: -1rem;
+      padding-top: 0.625rem;
+      padding-bottom: 0.625rem;
+      svg {
+        margin-left: 0.5rem;
+      }
+      p.card-more {
+        margin-right: 0.5rem;
+      }
+    }
   }
-
 }

@@ -161,9 +161,14 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.5;
   color: #331100;
+}
+@media screen and (min-width: 36em) {
+  body {
+    font-size: 1.25rem;
+  }
 }
 
 a {
@@ -188,7 +193,7 @@ h1 {
   text-align: center;
   font-size: 3rem;
 }
-@media screen and (min-width: 62em) {
+@media screen and (min-width: 75em) {
   h1 {
     font-size: 4.5rem;
     text-align: left;
@@ -207,6 +212,10 @@ h2 {
   }
 }
 
+h2 {
+  margin-bottom: 2.2rem;
+}
+
 h3 {
   font-size: 1.5rem;
   font-weight: 600;
@@ -222,6 +231,14 @@ a p.date {
 a p.student-more {
   font-size: 1rem;
 }
+a p.card-more {
+  font-size: 1.25rem;
+}
+@media screen and (min-width: 36em) {
+  a p.card-more {
+    font-size: 1.5rem;
+  }
+}
 
 header,
 section.jumbotron,
@@ -231,8 +248,14 @@ footer {
 }
 
 section.jumbotron .container .jumbotron-msg-wrapper a {
-  font-size: 2.5rem;
+  display: block;
+  font-size: 1.5rem;
   font-weight: 600;
+}
+@media screen and (min-width: 75em) {
+  section.jumbotron .container .jumbotron-msg-wrapper a {
+    font-size: 2.5rem;
+  }
 }
 
 address {
@@ -248,6 +271,8 @@ address {
   padding-right: 0.75rem;
   width: 100%;
   margin: 0 auto;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 @media screen and (min-width: 36em) {
   .container {
@@ -262,8 +287,6 @@ address {
 }
 @media screen and (min-width: 62em) {
   .container {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
     max-width: 75rem;
   }
 }
@@ -353,40 +376,119 @@ footer .container .social-menu {
 }
 
 .jumbotron {
-  height: 80vh;
+  position: relative;
+  height: 31.25rem;
+  background-color: black;
+  z-index: -10;
+}
+@media screen and (min-width: 75em) {
+  .jumbotron {
+    height: 43.75rem;
+  }
+}
+.jumbotron:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
   background-image: url("../img/macbook-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  opacity: 0.5;
+  z-index: -9;
+}
+@media screen and (min-width: 75em) {
+  .jumbotron:before {
+    opacity: 1;
+  }
+}
+.jumbotron .container {
+  height: 100%;
+  display: flex;
+}
+.jumbotron .container .jumbotron-msg-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.jumbotron a {
+  background-color: #FD7E37;
+  color: #fff;
+  font-weight: 600;
+  padding: 1.25rem 2rem;
 }
 @media screen and (min-width: 75em) {
   .jumbotron .container {
     position: relative;
-    width: 100%;
     height: 100%;
   }
   .jumbotron .jumbotron-msg-wrapper {
+    background-color: #00000080;
     padding-left: 1.5rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    padding-right: 1.5rem;
     position: absolute;
-    left: 10%;
+    left: 20%;
     top: 20%;
-    background-color: #00000080;
   }
   .jumbotron .jumbotron-msg-wrapper a {
-    background-color: #FD7E37;
-    color: #fff;
-    padding: 1.25rem 2rem;
-    float: right;
+    align-self: flex-end;
+    margin-right: 1.5rem;
   }
 }
-@media screen and (min-width: 87.5em) {
-  .jumbotron {
-    left: 25%;
+@media screen and (min-width: 75em) and (min-width: 87.5em) {
+  .jumbotron .jumbotron-msg-wrapper {
+    left: 30%;
     top: 33%;
   }
+}
+
+section.news .news-grid,
+section.modules .modules-grid {
+  display: grid;
+  align-items: center;
+  row-gap: 2rem;
+}
+
+.over-card-link .card {
+  margin: auto;
+  box-shadow: 0px 0px 48px #00000029;
+  border-radius: 4px;
+  max-width: 25.25rem;
+}
+.over-card-link .card .card-content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.over-card-link .card .card-content h3,
+.over-card-link .card .card-content .date {
+  margin-bottom: 1rem;
+}
+.over-card-link .card .card-content .read-more-container,
+.over-card-link .card .card-content .date {
+  margin-top: 1.5rem;
+}
+.over-card-link .card .card-content .read-more-container {
+  border-radius: 0px 0px 4px 4px;
+  background-color: #FD7E37;
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+.over-card-link .card .card-content .read-more-container svg {
+  margin-left: 0.5rem;
+}
+.over-card-link .card .card-content .read-more-container p.card-more {
+  margin-right: 0.5rem;
 }
 
 [hidden] {

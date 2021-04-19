@@ -15,7 +15,7 @@
 
 
 
-<?php include("includes/header.php"); ?>
+    <?php include("includes/header.php"); ?>
 
 
 
@@ -28,7 +28,7 @@
         <section class="jumbotron">
             <div class="container">
                 <div class="jumbotron-msg-wrapper">
-                    <h1>Bienvenue sur le site de la promotion DWWM2021-1</h1>
+                    <h1>Bienvenue sur le site de la promotion DWWM 2021-1</h1>
                     <a href="students.php" class="jumbotron-link">Rencontrez nos étudiants</a>
                 </div>
             </div>
@@ -52,26 +52,24 @@
                                     invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
                                     accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …</p>
                                 <div class="read-more-container">
-                                    <p class="card-more">Lire la suite</p><svg xmlns="http://www.w3.org/2000/svg" width="22"
-                                            height="22" viewBox="0 0 22 22">
-                                            <defs>
-                                                <style>
-                                                    .a {
-                                                        fill: none;
-                                                        stroke: #fff;
-                                                        stroke-linecap: round;
-                                                        stroke-linejoin: round;
-                                                        stroke-width: 2px;
-                                                    }
-                                                </style>
-                                            </defs>
-                                            <g transform="translate(1 1)">
-                                                <path class="a" d="M22,12A10,10,0,1,1,12,2,10,10,0,0,1,22,12Z"
-                                                    transform="translate(-2 -2)" />
-                                                <path class="a" d="M12,16l4-4L12,8" transform="translate(-2 -2)" />
-                                                <path class="a" d="M8,12h8" transform="translate(-2 -2)" />
-                                            </g>
-                                        </svg>
+                                    <p class="card-more">Lire la suite</p><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+                                        <defs>
+                                            <style>
+                                                .a {
+                                                    fill: none;
+                                                    stroke: #fff;
+                                                    stroke-linecap: round;
+                                                    stroke-linejoin: round;
+                                                    stroke-width: 2px;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <g transform="translate(1 1)">
+                                            <path class="a" d="M22,12A10,10,0,1,1,12,2,10,10,0,0,1,22,12Z" transform="translate(-2 -2)" />
+                                            <path class="a" d="M12,16l4-4L12,8" transform="translate(-2 -2)" />
+                                            <path class="a" d="M8,12h8" transform="translate(-2 -2)" />
+                                        </g>
+                                    </svg>
                                 </div>
                             </div>
                         </div>
@@ -87,26 +85,24 @@
                                     invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
                                     accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …</p>
                                 <div class="read-more-container">
-                                    <p class="card-more">Lire la suite</p><svg xmlns="http://www.w3.org/2000/svg" width="22"
-                                            height="22" viewBox="0 0 22 22">
-                                            <defs>
-                                                <style>
-                                                    .a {
-                                                        fill: none;
-                                                        stroke: #fff;
-                                                        stroke-linecap: round;
-                                                        stroke-linejoin: round;
-                                                        stroke-width: 2px;
-                                                    }
-                                                </style>
-                                            </defs>
-                                            <g transform="translate(1 1)">
-                                                <path class="a" d="M22,12A10,10,0,1,1,12,2,10,10,0,0,1,22,12Z"
-                                                    transform="translate(-2 -2)" />
-                                                <path class="a" d="M12,16l4-4L12,8" transform="translate(-2 -2)" />
-                                                <path class="a" d="M8,12h8" transform="translate(-2 -2)" />
-                                            </g>
-                                        </svg>
+                                    <p class="card-more">Lire la suite</p><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+                                        <defs>
+                                            <style>
+                                                .a {
+                                                    fill: none;
+                                                    stroke: #fff;
+                                                    stroke-linecap: round;
+                                                    stroke-linejoin: round;
+                                                    stroke-width: 2px;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <g transform="translate(1 1)">
+                                            <path class="a" d="M22,12A10,10,0,1,1,12,2,10,10,0,0,1,22,12Z" transform="translate(-2 -2)" />
+                                            <path class="a" d="M12,16l4-4L12,8" transform="translate(-2 -2)" />
+                                            <path class="a" d="M8,12h8" transform="translate(-2 -2)" />
+                                        </g>
+                                    </svg>
                                 </div>
                             </div>
                         </div>
@@ -122,26 +118,24 @@
                                     invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
                                     accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …</p>
                                 <div class="read-more-container">
-                                    <p class="card-more">Lire la suite</p><svg xmlns="http://www.w3.org/2000/svg" width="22"
-                                            height="22" viewBox="0 0 22 22">
-                                            <defs>
-                                                <style>
-                                                    .a {
-                                                        fill: none;
-                                                        stroke: #fff;
-                                                        stroke-linecap: round;
-                                                        stroke-linejoin: round;
-                                                        stroke-width: 2px;
-                                                    }
-                                                </style>
-                                            </defs>
-                                            <g transform="translate(1 1)">
-                                                <path class="a" d="M22,12A10,10,0,1,1,12,2,10,10,0,0,1,22,12Z"
-                                                    transform="translate(-2 -2)" />
-                                                <path class="a" d="M12,16l4-4L12,8" transform="translate(-2 -2)" />
-                                                <path class="a" d="M8,12h8" transform="translate(-2 -2)" />
-                                            </g>
-                                        </svg>
+                                    <p class="card-more">Lire la suite</p><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+                                        <defs>
+                                            <style>
+                                                .a {
+                                                    fill: none;
+                                                    stroke: #fff;
+                                                    stroke-linecap: round;
+                                                    stroke-linejoin: round;
+                                                    stroke-width: 2px;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <g transform="translate(1 1)">
+                                            <path class="a" d="M22,12A10,10,0,1,1,12,2,10,10,0,0,1,22,12Z" transform="translate(-2 -2)" />
+                                            <path class="a" d="M12,16l4-4L12,8" transform="translate(-2 -2)" />
+                                            <path class="a" d="M8,12h8" transform="translate(-2 -2)" />
+                                        </g>
+                                    </svg>
                                 </div>
                             </div>
                         </div>
@@ -203,20 +197,19 @@
         <section class="modules">
             <div class="container">
                 <h2>Les modules de la formation</h2>
-                <div class="modules-row">
-                    
+                <div class="modules-grid">
+
                     <a href="html-css.php" class="over-card-link">
-                    <div class="card">
-                        <img src="img\code.jpg" srcset="img\code-2x.jpg 2x" alt="code dans un IDE">
-                        <div class="card-content">
-                            <h3>Module HTML/CSS</h3>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-                                accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …</p>
-                            <div class="read-more-container">
-                                <p class="card-more">Lire la suite</p><svg xmlns="http://www.w3.org/2000/svg" width="22"
-                                        height="22" viewBox="0 0 22 22">
+                        <div class="card">
+                            <img src="img\code.jpg" srcset="img\code-2x.jpg 2x" alt="code dans un IDE">
+                            <div class="card-content">
+                                <h3>Module HTML/CSS</h3>
+                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                    tempor
+                                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                                    accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …</p>
+                                <div class="read-more-container">
+                                    <p class="card-more">Lire la suite</p><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
                                         <defs>
                                             <style>
                                                 .a {
@@ -229,29 +222,27 @@
                                             </style>
                                         </defs>
                                         <g transform="translate(1 1)">
-                                            <path class="a" d="M22,12A10,10,0,1,1,12,2,10,10,0,0,1,22,12Z"
-                                                transform="translate(-2 -2)" />
+                                            <path class="a" d="M22,12A10,10,0,1,1,12,2,10,10,0,0,1,22,12Z" transform="translate(-2 -2)" />
                                             <path class="a" d="M12,16l4-4L12,8" transform="translate(-2 -2)" />
                                             <path class="a" d="M8,12h8" transform="translate(-2 -2)" />
                                         </g>
                                     </svg>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-                
-                <a href="html-css.php" class="over-card-link">
-                    <div class="card">
-                        <img src="img\npm-keyboard.jpg" srcset="img\npm-keyboard-2x.jpg 2x" alt="logo npm et clavier">
-                        <div class="card-content">
-                            <h3>Module HTML/CSS</h3>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-                                accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …</p>
-                            <div class="read-more-container">
-                                <p class="card-more">Lire la suite</p><svg xmlns="http://www.w3.org/2000/svg" width="22"
-                                        height="22" viewBox="0 0 22 22">
+                    </a>
+
+                    <a href="html-css.php" class="over-card-link">
+                        <div class="card">
+                            <img src="img\npm-keyboard.jpg" srcset="img\npm-keyboard-2x.jpg 2x" alt="logo npm et clavier">
+                            <div class="card-content">
+                                <h3>Module HTML/CSS</h3>
+                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                    tempor
+                                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                                    accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …</p>
+                                <div class="read-more-container">
+                                    <p class="card-more">Lire la suite</p><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
                                         <defs>
                                             <style>
                                                 .a {
@@ -264,16 +255,15 @@
                                             </style>
                                         </defs>
                                         <g transform="translate(1 1)">
-                                            <path class="a" d="M22,12A10,10,0,1,1,12,2,10,10,0,0,1,22,12Z"
-                                                transform="translate(-2 -2)" />
+                                            <path class="a" d="M22,12A10,10,0,1,1,12,2,10,10,0,0,1,22,12Z" transform="translate(-2 -2)" />
                                             <path class="a" d="M12,16l4-4L12,8" transform="translate(-2 -2)" />
                                             <path class="a" d="M8,12h8" transform="translate(-2 -2)" />
                                         </g>
                                     </svg>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
 
                 </div>
             </div>
@@ -283,8 +273,8 @@
     </main>
 
 
-    
-<?php include("includes/footer.php"); ?>
+
+    <?php include("includes/footer.php"); ?>
 
 
 
