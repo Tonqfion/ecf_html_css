@@ -86,6 +86,10 @@ footer {
   color: $white;
 }
 
+ .menu {
+   font-weight:600;
+ } 
+
 section.jumbotron .container .jumbotron-msg-wrapper a {
   display:block;
   font-size:1.5rem;
@@ -97,6 +101,7 @@ section.jumbotron .container .jumbotron-msg-wrapper a {
 
 address {
     font-style:normal;
+    line-height:2.25rem;
 }
 
 .legal-menu {

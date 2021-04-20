@@ -1,4 +1,8 @@
 //Config Container
+main {
+  position: relative;
+  z-index: 1;
+}
 
 .container {
   padding-left: 0.75rem;
@@ -49,6 +53,9 @@ footer .container {
   .legal-menu,
   .social-menu {
     @include flex-display(column, center, space-around);
+    .social-item .social-link svg .a {
+      stroke: none;
+    }
   }
 
   @include flex-display(column, center, space-between);
@@ -174,33 +181,60 @@ footer .container {
 // actualités homepage et modules homepages
 
 section.news .news-grid,
-section.modules .modules-grid {
+section.modules .modules-grid,
+section.students .students-row  {
   display: grid;
   align-items: center;
   row-gap: 2rem;
+}
+
+section.news .news-grid {
+  @include screen {
+    @include gridColumnRepeatLayout(3, 2rem);
+  }
+}
+
+section.modules .modules-grid {
+  @include screen {
+    @include gridColumnRepeatLayout(2, 2rem);
+  }
 }
 
 // cards homepage et modules
 
 .over-card-link .card {
   margin: auto;
-  box-shadow: 0px 0px 48px #00000029;
-  border-radius: 4px;
-  max-width: 25.25rem;
+  box-shadow: 0px 0px 4rem #00000029;
+  border-radius: 0.25rem;
+  max-width: 38.875rem;
+
+  img {
+    width: 100%;
+  }
+
   .card-content {
     padding-left: 1rem;
     padding-right: 1rem;
-    h3,
-    .date {
+    h3 {
       margin-bottom: 1rem;
     }
-    .read-more-container,
-    .date {
+    .read-more-container {
       margin-top: 1.5rem;
+    }
+    .date-row {
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      @include flex-display(row, center, flex-start);
+      svg {
+        margin-right: 0.25rem;
+      }
+      .date {
+        margin-left: 0.25rem;
+      }
     }
 
     .read-more-container {
-      border-radius: 0px 0px 4px 4px;
+      border-radius: 0px 0px 0.25rem 0.25rem;
       @include orange-button-link;
       @include flex-display(row, center, center);
       margin-left: -1rem;
@@ -210,9 +244,77 @@ section.modules .modules-grid {
       svg {
         margin-left: 0.5rem;
       }
+
+      svg g path.a {
+        fill: transparent;
+        stroke: #fff;
+      }
+
       p.card-more {
         margin-right: 0.5rem;
       }
     }
   }
+}
+
+.news .news-grid .over-card-link .card {
+  @include screen {
+    max-width: 25.75rem;
+  }
+}
+.modules .modules-grid .over-card-link .card .card-content h3 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  @include large-phone {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+
+// les étudiants !
+
+section.students .students-row {
+  row-gap: 3rem;
+  @include tablet {
+    @include gridColumnRepeatLayout(2,6.81rem);
+    row-gap:4rem;
+  }
+  @include large-screen {
+    @include gridColumnRepeatLayout(4,6.81rem);
+  }
+
+  .over-card-link .student-card {
+    @include flex-display(column,center,space-between);
+
+
+    img {
+      flex:0 0 auto;
+      @media screen and (min-width:19.5rem) {
+        max-width:18rem;
+      }
+
+      @include large-tablet {
+        max-width:24rem;
+      }
+
+      @include large-screen {
+        max-width:13.625rem;
+      }
+    }
+
+
+    .student-content {
+      text-align: center;
+      h3 {
+        margin-top:1.25rem;
+        margin-bottom:1.25rem;
+      }
+      .student-more {
+        text-decoration: underline;
+      }
+    }
+  }
+
+
 }
