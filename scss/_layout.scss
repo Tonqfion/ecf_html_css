@@ -13,7 +13,7 @@ main {
   padding-bottom: 1.25rem;
 
   @include large-phone {
-    padding: 1.5rem 2rem 1.5rem 2rem;
+    padding: 2.25rem 2rem 2.25rem 2rem;
     max-width: 48rem;
   }
   @include tablet {
@@ -43,6 +43,12 @@ footer,
 
 .site-header .container {
   @include flex-display(row, center, space-between);
+
+  //Ecrasement des paramètres de largeur du container du header sur un écran phone (sinon padding trop grand)
+
+  @include large-phone {
+    padding: 1.25rem 0.75rem 1.25rem 0.75rem;
+  }
 }
 
 //footer only
@@ -53,8 +59,13 @@ footer .container {
   .legal-menu,
   .social-menu {
     @include flex-display(column, center, space-around);
-    .social-item .social-link svg .a {
-      stroke: none;
+    .social-link{
+      padding-top:1rem;
+      padding-bottom:1rem;
+      @include flex-display(row, center, center);
+      svg .a {
+        stroke: none;
+      }
     }
   }
 
@@ -117,7 +128,7 @@ footer .container {
   }
 
   // un before pour pouvoir faire un fond qui est légèrement transparent de base (donc tend vers le noir du background-color du jumbotron)
-  &:before {
+  &::before {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -182,7 +193,7 @@ footer .container {
 
 section.news .news-grid,
 section.modules .modules-grid,
-section.students .students-row  {
+section.students .students-row {
   display: grid;
   align-items: center;
   row-gap: 2rem;
@@ -202,7 +213,7 @@ section.modules .modules-grid {
 
 // cards homepage et modules
 
-.over-card-link .card {
+.card {
   margin: auto;
   box-shadow: 0px 0px 4rem #00000029;
   border-radius: 0.25rem;
@@ -257,12 +268,12 @@ section.modules .modules-grid {
   }
 }
 
-.news .news-grid .over-card-link .card {
+.news .news-grid .card {
   @include screen {
     max-width: 25.75rem;
   }
 }
-.modules .modules-grid .over-card-link .card .card-content h3 {
+.modules .modules-grid .card .card-content h3 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   @include large-phone {
@@ -271,50 +282,45 @@ section.modules .modules-grid {
   }
 }
 
-
 // les étudiants !
 
 section.students .students-row {
   row-gap: 3rem;
   @include tablet {
-    @include gridColumnRepeatLayout(2,6.81rem);
-    row-gap:4rem;
+    @include gridColumnRepeatLayout(2, 6.81rem);
+    row-gap: 4rem;
   }
   @include large-screen {
-    @include gridColumnRepeatLayout(4,6.81rem);
+    @include gridColumnRepeatLayout(4, 6.81rem);
   }
 
-  .over-card-link .student-card {
-    @include flex-display(column,center,space-between);
-
+  .student-card {
+    @include flex-display(column, center, space-between);
 
     img {
-      flex:0 0 auto;
-      @media screen and (min-width:19.5rem) {
-        max-width:18rem;
+      flex: 0 0 auto;
+      @media screen and (min-width: 19.5rem) {
+        max-width: 18rem;
       }
 
       @include large-tablet {
-        max-width:24rem;
+        max-width: 24rem;
       }
 
       @include large-screen {
-        max-width:13.625rem;
+        max-width: 13.625rem;
       }
     }
-
 
     .student-content {
       text-align: center;
       h3 {
-        margin-top:1.25rem;
-        margin-bottom:1.25rem;
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
       }
       .student-more {
         text-decoration: underline;
       }
     }
   }
-
-
 }

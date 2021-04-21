@@ -6,7 +6,7 @@
             <p class="adress-text">CEFIM</p>
             <p class="adress-text">32 Avenue Marcel Dassault</p>
             <p class="adress-text">37200 Tours</p>
-            <p class="adress-text">T : 02.47.4026.80</p>
+            <p class="adress-text">T : 02.47.40.26.80</p>
         </address>
         <div class="legal-menu-wrapper">
             <ul class="legal-menu" role="list">

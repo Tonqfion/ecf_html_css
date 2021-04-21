@@ -1,0 +1,182 @@
+//Focus & hover sur logo
+.logo {
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover,
+.logo:focus {
+  transform: scale(1.25);
+  transition: transform 0.3s ease-in-out;
+}
+
+//Effets de hover & focus sur menu principal et sur jumbotron
+
+section.jumbotron .container .jumbotron-msg-wrapper a,
+.menu-link {
+  position: relative;
+  z-index: 1;
+  transition: ease-in-out 0.3s;
+  &::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    background-color: $white;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: ease-in-out 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    color: $orange;
+    transition: ease-in-out 0.3s;
+    &::before {
+      width: 100%;
+      transition: ease-in-out 0.3s;
+    }
+  }
+}
+
+.card,
+.student-card {
+  position: relative;
+  transition: ease-in-out 0.3s;
+}
+
+.card .card-content .read-more-container,
+.student-card .student-more {
+  &::before {
+    content: "";
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 0.25rem;
+  }
+}
+
+.card:hover,
+.student-card:hover {
+  transform: scale(1.05);
+  transition: ease-in-out 0.3s;
+}
+
+.student-card {
+  img {
+    border-radius: 50%;
+    transition: ease-in-out 0.3s;
+  }
+}
+.student-card:hover {
+  img {
+    filter: grayscale(0.8);
+    transition: ease-in-out 0.3s;
+  }
+}
+
+//hover & focus lire la suite (souligné + jeu sur le svg)
+
+.read-more-container {
+  svg {
+    transition: ease-in-out 0.5s;
+  }
+  .card-more {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0rem;
+      background-color: $white;
+      height: 0.125rem;
+      width: 100%;
+      transform: scaleX(0);
+      transition: ease-in-out 0.3s;
+    }
+  }
+  &:hover,
+  &:focus {
+    overflow: hidden;
+    .card-more::after {
+      transform: scaleX(1);
+      transition: ease-in-out 0.3s;
+    }
+    svg {
+      transform: rotate(180deg) scale(1.5);
+      transition: ease-in-out 0.5s;
+    }
+  }
+}
+
+//Hover & focus menu legal (souligné)
+
+.legal-link {
+  position: relative;
+  z-index: 20;
+  &::after {
+    z-index: 9999999999999999999;
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 0;
+    bottom: -0.25rem;
+    height: 0.125rem;
+    background-color: $white;
+    transition: width ease-in-out 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      width: 100%;
+      transition: width ease-in-out 0.3s;
+    }
+  }
+}
+
+//hover & focus menu social
+
+.social-item .social-link {
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "";
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 0px $white;
+    border-radius: 50%;
+    background-color: $white;
+    transition: all ease-in-out 0.2s;
+    opacity: 0;
+    z-index: -1;
+  }
+  &:hover,
+  &:focus {
+    &::before {
+      box-shadow: 0 0 0 2rem $white;
+      opacity: 1;
+    }      svg .a {
+        stroke: $orange;
+        fill: $orange;
+        transition: ease-in-out 0.2s;
+      }
+  }
+
+  //   width: 3.5rem;
+  //   height: 3.5rem;
+  //   border-radius: 50%;
+  //   transition: ease-in-out 0.3s;
+  //   &:hover,
+  //   &:focus {
+  //     background-color: $white;
+
+  //   }
+}
