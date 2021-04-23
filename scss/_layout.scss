@@ -36,7 +36,7 @@ footer,
 
 //Header only
 
-.site-header {
+header.site-header {
   position: sticky;
   z-index: 999;
 }
@@ -53,69 +53,71 @@ footer,
 
 //footer only
 
-footer .container {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  .legal-menu,
-  .social-menu {
-    @include flex-display(column, center, space-around);
-    .social-link{
-      padding-top:1rem;
-      padding-bottom:1rem;
-      @include flex-display(row, center, center);
-      svg .a {
-        stroke: none;
-      }
-    }
-  }
-
-  @include flex-display(column, center, space-between);
-  div {
-    margin: 1rem;
-  }
-  @include tablet {
-    display: grid;
-    grid-template-areas:
-      "a l"
-      "a s";
-    .address-wrapper {
-      grid-area: a;
-    }
-    .legal-menu-wrapper {
-      grid-area: l;
-    }
-    .social-menu-wrapper {
-      grid-area: s;
-    }
-  }
-  @include screen {
-    grid-template-areas: initial;
-    grid-template-columns: 25rem 1fr 12.5rem;
-
-    div {
-      margin: 0;
-    }
-    .address-wrapper,
-    .legal-menu-wrapper,
-    .social-menu-wrapper {
-      grid-area: initial;
-    }
+footer {
+  border-top: 0.0625px solid $border-color;
+  .container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     .legal-menu,
     .social-menu {
-      flex-direction: row;
-    }
-    .legal-menu {
-      justify-content: center;
-      .legal-item:nth-of-type(1) {
-        margin-right: 0.625rem;
+      @include flex-display(column, center, space-around);
+      .social-link {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        @include flex-display(row, center, center);
+        svg .a {
+          stroke: none;
+        }
       }
-      .legal-item:nth-of-type(2) {
-        margin-left: 0.625rem;
+    }
+
+    @include flex-display(column, center, space-between);
+    div {
+      margin: 1rem;
+    }
+    @include tablet {
+      display: grid;
+      grid-template-areas:
+        "a l"
+        "a s";
+      .address-wrapper {
+        grid-area: a;
+      }
+      .legal-menu-wrapper {
+        grid-area: l;
+      }
+      .social-menu-wrapper {
+        grid-area: s;
+      }
+    }
+    @include screen {
+      grid-template-areas: initial;
+      grid-template-columns: 25rem 1fr 12.5rem;
+
+      div {
+        margin: 0;
+      }
+      .address-wrapper,
+      .legal-menu-wrapper,
+      .social-menu-wrapper {
+        grid-area: initial;
+      }
+      .legal-menu,
+      .social-menu {
+        flex-direction: row;
+      }
+      .legal-menu {
+        justify-content: center;
+        .legal-item:nth-of-type(1) {
+          margin-right: 0.625rem;
+        }
+        .legal-item:nth-of-type(2) {
+          margin-left: 0.625rem;
+        }
       }
     }
   }
 }
-
 //Jumbo HomePage
 
 .jumbotron {
@@ -159,6 +161,7 @@ footer .container {
   a {
     @include orange-button-link;
     padding: 1.25rem 2rem;
+    border: 0.0625px solid $border-color;
   }
 
   // Desktop version du jumbotron - on place le container en relatif pour pouvoir positionner le msg en absolute (positionnement différent entre petit écran et haute résolution
@@ -284,43 +287,57 @@ section.modules .modules-grid {
 
 // les étudiants !
 
-section.students .students-row {
-  row-gap: 3rem;
-  @include tablet {
-    @include gridColumnRepeatLayout(2, 6.81rem);
-    row-gap: 4rem;
-  }
-  @include large-screen {
-    @include gridColumnRepeatLayout(4, 6.81rem);
-  }
+section.students {
+  border-top: 0.0625px solid $border-color;
+  border-bottom: 0.0625px solid $border-color;
 
-  .student-card {
-    @include flex-display(column, center, space-between);
-
-    img {
-      flex: 0 0 auto;
-      @media screen and (min-width: 19.5rem) {
-        max-width: 18rem;
-      }
-
-      @include large-tablet {
-        max-width: 24rem;
-      }
-
-      @include large-screen {
-        max-width: 13.625rem;
-      }
+  .students-row {
+    row-gap: 3rem;
+    @include tablet {
+      @include gridColumnRepeatLayout(2, 6.81rem);
+      row-gap: 4rem;
+    }
+    @include large-screen {
+      @include gridColumnRepeatLayout(4, 6.81rem);
     }
 
-    .student-content {
-      text-align: center;
-      h3 {
-        margin-top: 1.25rem;
-        margin-bottom: 1.25rem;
+    .student-card {
+      @include flex-display(column, center, space-between);
+
+      img {
+        flex: 0 0 auto;
+        @media screen and (min-width: 19.5rem) {
+          max-width: 18rem;
+        }
+
+        @include large-tablet {
+          max-width: 24rem;
+        }
+
+        @include large-screen {
+          max-width: 13.625rem;
+        }
       }
-      .student-more {
-        text-decoration: underline;
+
+      .student-content {
+        text-align: center;
+        h3 {
+          margin-top: 1.25rem;
+          margin-bottom: 1.25rem;
+        }
+        .student-more {
+          text-decoration: underline;
+        }
       }
     }
   }
+}
+
+// top wrapper (titles et baselines)
+
+
+P.baseline {
+  text-align: left;
+  max-width: 52.5rem;
+  margin:2.5rem auto;
 }
