@@ -43,7 +43,8 @@ h1 {
 h2,
 h1.side-page {
   font-size: 2.5rem;
-  text-align: center;
+  &:not(.h3style) {
+  text-align: center;}
   @include large-tablet {
     font-size: 3rem;
   }
@@ -53,7 +54,8 @@ h2 {
   margin-bottom: 2.2rem;
 }
 
-h3 {
+h3,
+h2.h3style {
   font-size: 1.5rem;
   font-weight: 600;
   &.student-title {
@@ -115,4 +117,10 @@ p.baseline {
   @include tablet {
     font-size:1.5rem;
   }
+}
+
+.pagination a {
+  font-weight:500;
+  font-size:1rem;
+  line-height:2.25rem;
 }

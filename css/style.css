@@ -204,6 +204,10 @@ h1 {
 h2,
 h1.side-page {
   font-size: 2.5rem;
+}
+.logo:not(.h3style),
+h2:not(.h3style),
+h1.side-page:not(.h3style) {
   text-align: center;
 }
 @media screen and (min-width: 62em) {
@@ -218,11 +222,13 @@ h2 {
   margin-bottom: 2.2rem;
 }
 
-h3 {
+h3,
+h2.h3style {
   font-size: 1.5rem;
   font-weight: 600;
 }
-h3.student-title {
+h3.student-title,
+h2.h3style.student-title {
   text-align: center;
 }
 
@@ -282,6 +288,12 @@ p.baseline {
   p.baseline {
     font-size: 1.5rem;
   }
+}
+
+.pagination a {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 2.25rem;
 }
 
 main {
@@ -527,7 +539,8 @@ section.students .students-row {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.card .card-content h3 {
+.card .card-content h3,
+.card .card-content .h3style {
   margin-bottom: 1rem;
 }
 .card .card-content .read-more-container {
@@ -578,20 +591,22 @@ section.students .students-row {
   }
 }
 
-.modules .modules-grid .card .card-content h3 {
+.modules .modules-grid .card .card-content h3,
+.modules .modules-grid .card .card-content h2.h3style {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
 }
 @media screen and (min-width: 36em) {
-  .modules .modules-grid .card .card-content h3 {
+  .modules .modules-grid .card .card-content h3,
+.modules .modules-grid .card .card-content h2.h3style {
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
   }
 }
 
 section.students {
-  border-top: 0.0625px solid #707070;
-  border-bottom: 0.0625px solid #707070;
+  border-top: 0.0625rem solid #707070;
+  border-bottom: 0.0625rem solid #707070;
 }
 section.students .students-row {
   row-gap: 3rem;
@@ -638,7 +653,8 @@ section.students .students-row .student-card img {
 section.students .students-row .student-card .student-content {
   text-align: center;
 }
-section.students .students-row .student-card .student-content h3 {
+section.students .students-row .student-card .student-content h3,
+section.students .students-row .student-card .student-content h2.h3style {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
 }
@@ -648,8 +664,26 @@ section.students .students-row .student-card .student-content .student-more {
 
 P.baseline {
   text-align: left;
-  max-width: 52.5rem;
-  margin: 2.5rem auto;
+  margin: 0 auto 2.5rem auto;
+  max-width: 38.875rem;
+}
+@media screen and (min-width: 75em) {
+  P.baseline {
+    max-width: 52.5rem;
+  }
+}
+
+h1.side-page {
+  margin-bottom: 2.5rem;
+}
+
+section.students-page {
+  border: none;
+  color: #331100;
+  background-color: #fff;
+}
+section.students-page .container .student-more {
+  color: #FD7E37;
 }
 
 [hidden] {
@@ -753,6 +787,41 @@ P.baseline {
     max-width: 69.375em;
   }
 }
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.pagination a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #FD7E37;
+  width: 1.875rem;
+  height: 1.875rem;
+  border: 0.0625rem solid #FD7E37;
+  border-radius: 0.3125rem;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+  transition: ease-in-out 0.3s;
+}
+
+.pagination a.active {
+  background-color: #FD7E37;
+  color: #fff;
+}
+
+.pagination a:hover {
+  color: #fff;
+  background-color: #FD7E37;
+  transition: ease-in-out 0.3s;
+}
+
 .logo {
   transition: transform 0.3s ease-in-out;
 }

@@ -229,7 +229,8 @@ section.modules .modules-grid {
   .card-content {
     padding-left: 1rem;
     padding-right: 1rem;
-    h3 {
+    h3,
+    .h3style {
       margin-bottom: 1rem;
     }
     .read-more-container {
@@ -276,7 +277,8 @@ section.modules .modules-grid {
     max-width: 25.75rem;
   }
 }
-.modules .modules-grid .card .card-content h3 {
+.modules .modules-grid .card .card-content h3,
+.modules .modules-grid .card .card-content h2.h3style {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   @include large-phone {
@@ -288,8 +290,8 @@ section.modules .modules-grid {
 // les étudiants !
 
 section.students {
-  border-top: 0.0625px solid $border-color;
-  border-bottom: 0.0625px solid $border-color;
+  border-top: 0.0625rem solid $border-color;
+  border-bottom: 0.0625rem solid $border-color;
 
   .students-row {
     row-gap: 3rem;
@@ -321,7 +323,8 @@ section.students {
 
       .student-content {
         text-align: center;
-        h3 {
+        h3,
+        h2.h3style {
           margin-top: 1.25rem;
           margin-bottom: 1.25rem;
         }
@@ -338,6 +341,32 @@ section.students {
 
 P.baseline {
   text-align: left;
-  max-width: 52.5rem;
-  margin:2.5rem auto;
+  margin:0 auto 2.5rem auto;
+  max-width: 38.875rem;
+  @include screen {
+
+    max-width: 52.5rem;
+  }
+}
+
+
+h1.side-page {
+  margin-bottom:2.5rem;
+}
+
+
+// modification spécifique page students
+
+
+
+
+section.students-page {
+  border:none;
+  color:$writing-dark;
+  background-color: $white;
+  .container {
+    .student-more {
+      color:$orange;
+    }
+  }
 }

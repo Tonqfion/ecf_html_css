@@ -108,3 +108,37 @@
   }
 }
 
+
+
+// Pagination
+
+
+.pagination {
+  @include flex-display(row,center,center);
+  margin:auto;
+}
+
+.pagination a {
+  @include flex-display(column,center,center);
+  text-align: center;
+  color:$orange;
+  width:1.875rem;
+  height:1.875rem;
+  border: .0625rem solid $orange;
+  border-radius: .3125rem;
+  margin-left:0.625rem;
+  margin-right:0.625rem;
+  transition:ease-in-out .3s;
+
+}
+
+.pagination a.active {
+  background-color: $orange;
+  color: $white
+}
+
+.pagination a:hover {
+  color:$white;
+  background-color:$orange;
+  transition:ease-in-out .3s;
+}
