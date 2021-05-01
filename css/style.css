@@ -1113,6 +1113,15 @@ form.contact-form .submit-wrapper .submit-btn:hover g path.a, form.contact-form 
   stroke: #FD7E37;
 }
 
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  width: 1px;
+  position: absolute;
+  white-space: nowrap;
+}
+
 .logo {
   transition: transform 0.3s ease-in-out;
 }

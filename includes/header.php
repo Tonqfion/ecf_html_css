@@ -11,6 +11,7 @@
     <header class="site-header">
     <div class="container">
             <a href="index.php" class="logo" aria-label="Le site de la formation DWWM2021-1">DWWM
+				<span class="screen-reader-text">Le site de la promotion 2021-1</span>
 				</a>
         <nav class="main-nav" role="navigation" aria-label="Menu principal">
                 <button class="toggle-menu" aria-expanded="false" aria-controls="menu" arial-label="Ouvrir le menu Mobile">

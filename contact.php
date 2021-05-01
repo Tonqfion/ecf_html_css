@@ -25,7 +25,7 @@
             <div class="container">
                 
             <h1 class="side-page">Nous contacter</h1>
-                <form class="contact-form">
+                <form class="contact-form" onsubmit="return false;">
                     <div class="input-wrapper">
                     <label for="your-name">Votre nom</label>
                     <input type="text" name="your-name" placeholder="Entrez votre nom"></div>
