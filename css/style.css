@@ -208,19 +208,12 @@ h1.jumbo-mod-h1 {
 .logo,
 h2,
 h1.side-page {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 .logo:not(.h3style),
 h2:not(.h3style),
 h1.side-page:not(.h3style) {
   text-align: center;
-}
-@media screen and (min-width: 36em) {
-  .logo,
-h2,
-h1.side-page {
-    font-size: 2rem;
-  }
 }
 @media screen and (min-width: 62em) {
   .logo,
@@ -235,7 +228,14 @@ h1.side-page {
 }
 
 h2 {
-  margin-bottom: 2.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+}
+@media screen and (min-width: 62em) {
+  h2 {
+    margin-top: 0;
+    margin-bottom: 2.25rem;
+  }
 }
 
 h3,
@@ -509,8 +509,9 @@ footer .container .social-menu {
   background-color: #FD7E37;
   color: #fff;
   font-weight: 600;
-  padding: 1.25rem 2rem;
-  border: 0.0625px solid #707070;
+  text-align: center;
+  padding: 0.75rem 1.25rem;
+  border: 0.0625rem solid #707070;
 }
 @media screen and (min-width: 75em) {
   .jumbotron .container {
@@ -529,6 +530,7 @@ footer .container .social-menu {
   .jumbotron .jumbotron-msg-wrapper a {
     align-self: flex-end;
     margin-right: 1.5rem;
+    padding: 1.25rem 2rem;
   }
 }
 @media screen and (min-width: 75em) and (min-width: 87.5em) {
@@ -696,7 +698,22 @@ section.students .students-row .student-card .student-content h2.h3style {
   margin-bottom: 1.25rem;
 }
 section.students .students-row .student-card .student-content .student-more {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
   text-decoration: underline;
+  transition: ease-in-out 0.3s;
+}
+section.students .students-row .student-card .student-content .student-more:hover, section.students .students-row .student-card .student-content .student-more:focus {
+  transition: ease-in-out 0.3s;
+  text-decoration: none;
+}
+section.students .students-row .student-card .student-content .student-more.index-student-more:hover, section.students .students-row .student-card .student-content .student-more.index-student-more:focus {
+  background-color: #fff;
+  color: #FD7E37;
+}
+section.students .students-row .student-card .student-content .student-more.student-page-more:hover, section.students .students-row .student-card .student-content .student-more.student-page-more:focus {
+  background-color: #FD7E37;
+  color: #fff;
 }
 
 article.article-formation .container p,
@@ -974,7 +991,8 @@ article.article-wrapper .container .article-header .date-row {
   color: #fff;
 }
 
-.pagination a:hover {
+.pagination a:hover,
+.pagination a:focus {
   color: #fff;
   background-color: #FD7E37;
   transition: ease-in-out 0.3s;

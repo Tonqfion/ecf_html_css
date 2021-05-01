@@ -166,8 +166,9 @@ footer {
 
   a {
     @include orange-button-link;
-    padding: 1.25rem 2rem;
-    border: 0.0625px solid $border-color;
+    text-align: center;
+    padding: 0.75rem 1.25rem;
+    border: 0.0625rem solid $border-color;
   }
 
   // Desktop version du jumbotron - on place le container en relatif pour pouvoir positionner le msg en absolute (positionnement différent entre petit écran et haute résolution
@@ -188,6 +189,7 @@ footer {
       a {
         align-self: flex-end;
         margin-right: 1.5rem;
+        padding: 1.25rem 2rem;
       }
 
       @include large-screen {
@@ -336,7 +338,29 @@ section.students {
           margin-bottom: 1.25rem;
         }
         .student-more {
+          padding: 0.5rem;
+          border-radius: 0.25rem;
           text-decoration: underline;
+          transition: ease-in-out 0.3s;
+          &:hover,
+          &:focus {
+            transition: ease-in-out 0.3s;
+            text-decoration: none;
+          }
+        }
+        .student-more.index-student-more {
+          &:hover,
+          &:focus {
+            background-color: $white;
+            color: $orange;
+          }
+        }
+        .student-more.student-page-more {
+          &:hover,
+          &:focus {
+            background-color: $orange;
+            color: $white;
+          }
         }
       }
     }

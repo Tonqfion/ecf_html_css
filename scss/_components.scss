@@ -135,7 +135,8 @@
   color: $white;
 }
 
-.pagination a:hover {
+.pagination a:hover,
+.pagination a:focus {
   color: $white;
   background-color: $orange;
   transition: ease-in-out 0.3s;

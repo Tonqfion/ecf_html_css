@@ -62,7 +62,7 @@
 
             </section>
     </main>
-
+<script src="js/form.js"></script>
 
 
     <?php include("includes/footer.php"); ?>

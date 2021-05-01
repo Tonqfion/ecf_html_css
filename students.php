@@ -30,7 +30,7 @@
                         <img src="img\francine.png" srcset="img\francine-2x.png" alt="Francine Auhi">
                         <div class="student-content">
                             <h2 class="student-title h3style">Francine Auhi</h3>
-                            <a class="student-more" href="student.php">En savoir plus</a>
+                            <a class="student-more student-page-more" href="student.php">En savoir plus</a>
                         </div>
                     </div>
 
@@ -38,7 +38,7 @@
                         <img src="img\ali.png" srcset="img\ali-2x.png" alt="Ali Korn">
                         <div class="student-content">
                             <h2 class="student-title h3style">Ali Korn</h3>
-                            <a class="student-more" href="student.php">En savoir plus</a>
+                            <a class="student-more student-page-more" href="student.php">En savoir plus</a>
                         </div>
                     </div>
 
@@ -46,7 +46,7 @@
                         <img src="img\jean.png" srcset="img\jean-2x.png" alt="Jean Vascrit">
                         <div class="student-content">
                             <h2 class="student-title h3style">Jean Vascrit</h3>
-                            <a class="student-more" href="student.php">En savoir plus</a>
+                            <a class="student-more student-page-more" href="student.php">En savoir plus</a>
                         </div>
                     </div>
 
@@ -54,7 +54,7 @@
                         <img src="img\lara.png" srcset="img\lara-2x.png" alt="Lara Velle">
                         <div class="student-content">
                             <h2 class="student-title h3style">Lara Velle</h3>
-                            <a class="student-more" href="student.php">En savoir plus</a>
+                            <a class="student-more student-page-more" href="student.php">En savoir plus</a>
                         </div>
                     </div>
 
@@ -62,7 +62,7 @@
                         <img src="img\francine.png" srcset="img\francine-2x.png" alt="Francine Auhi">
                         <div class="student-content">
                             <h2 class="student-title h3style">Francine Auhi</h3>
-                            <a class="student-more" href="student.php">En savoir plus</a>
+                            <a class="student-more student-page-more" href="student.php">En savoir plus</a>
                         </div>
                     </div>
 
@@ -70,7 +70,7 @@
                         <img src="img\ali.png" srcset="img\ali-2x.png" alt="Ali Korn">
                         <div class="student-content">
                             <h2 class="student-title h3style">Ali Korn</h3>
-                            <a class="student-more" href="student.php">En savoir plus</a>
+                            <a class="student-more student-page-more" href="student.php">En savoir plus</a>
                         </div>
                     </div>
 
@@ -78,7 +78,7 @@
                         <img src="img\jean.png" srcset="img\jean-2x.png" alt="Jean Vascrit">
                         <div class="student-content">
                             <h2 class="student-title h3style">Jean Vascrit</h3>
-                            <a class="student-more" href="student.php">En savoir plus</a>
+                            <a class="student-more student-page-more" href="student.php">En savoir plus</a>
                         </div>
                     </div>
 
@@ -86,7 +86,7 @@
                         <img src="img\lara.png" srcset="img\lara-2x.png" alt="Lara Velle">
                         <div class="student-content">
                             <h2 class="student-title h3style">Lara Velle</h3>
-                            <a class="student-more" href="student.php">En savoir plus</a>
+                            <a class="student-more student-page-more" href="student.php">En savoir plus</a>
                         </div>
                     </div>
 
@@ -94,7 +94,7 @@
                         <img src="img\francine.png" srcset="img\francine-2x.png" alt="Francine Auhi">
                         <div class="student-content">
                             <h2 class="student-title h3style">Francine Auhi</h3>
-                            <a class="student-more" href="student.php">En savoir plus</a>
+                            <a class="student-more student-page-more" href="student.php">En savoir plus</a>
                         </div>
                     </div>
 
@@ -102,7 +102,7 @@
                         <img src="img\ali.png" srcset="img\ali-2x.png" alt="Ali Korn">
                         <div class="student-content">
                             <h2 class="student-title h3style">Ali Korn</h3>
-                            <a class="student-more" href="student.php">En savoir plus</a>
+                            <a class="student-more student-page-more" href="student.php">En savoir plus</a>
                         </div>
                     </div>
 
@@ -110,7 +110,7 @@
                         <img src="img\jean.png" srcset="img\jean-2x.png" alt="Jean Vascrit">
                         <div class="student-content">
                             <h2 class="student-title h3style">Jean Vascrit</h3>
-                            <a class="student-more" href="student.php">En savoir plus</a>
+                            <a class="student-more student-page-more" href="student.php">En savoir plus</a>
                         </div>
                     </div>
 
@@ -118,7 +118,7 @@
                         <img src="img\lara.png" srcset="img\lara-2x.png" alt="Lara Velle">
                         <div class="student-content">
                             <h2 class="student-title h3style">Lara Velle</h3>
-                            <a class="student-more" href="student.php">En savoir plus</a>
+                            <a class="student-more student-page-more" href="student.php">En savoir plus</a>
                         </div>
                     </div>
 
