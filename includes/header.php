@@ -1,4 +1,14 @@
-<header class="site-header">
+
+
+	<nav class="skip-links">
+		<ul>
+			<li><a href="#menu">Allez au menu principal</a></li>
+			<li><a href="#main-content">Allez au contenu principal</a></li>
+		</ul>
+	</nav>
+    
+    
+    <header class="site-header">
     <div class="container">
             <a href="index.php" class="logo" aria-label="Le site de la formation DWWM2021-1">DWWM
 				</a>

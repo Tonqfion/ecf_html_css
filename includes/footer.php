@@ -10,8 +10,8 @@
         </address>
         <div class="legal-menu-wrapper">
             <ul class="legal-menu" role="list">
-                <li class="legal-item" role="listitem"><a href="#" class="legal-link">Mentions légales</a></li>
-                <li class="legal-item" role="listitem"><a href="#" class="legal-link">Politique de confidentialité</a></li>
+                <li class="legal-item" role="listitem"><a href="legal.php" class="legal-link">Mentions légales</a></li>
+                <li class="legal-item" role="listitem"><a href="legal.php" class="legal-link">Politique de confidentialité</a></li>
             </ul>
         </div>
         <div class="social-menu-wrapper">

@@ -200,15 +200,27 @@ h1 {
   }
 }
 
+h1.jumbo-mod-h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
 .logo,
 h2,
 h1.side-page {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 .logo:not(.h3style),
 h2:not(.h3style),
 h1.side-page:not(.h3style) {
   text-align: center;
+}
+@media screen and (min-width: 36em) {
+  .logo,
+h2,
+h1.side-page {
+    font-size: 2rem;
+  }
 }
 @media screen and (min-width: 62em) {
   .logo,
@@ -216,6 +228,10 @@ h2,
 h1.side-page {
     font-size: 3rem;
   }
+}
+
+.jumbo-module h1 {
+  color: #fff;
 }
 
 h2 {
@@ -232,10 +248,11 @@ h2.h3style.student-title {
   text-align: center;
 }
 
-.card p.date {
+.date {
   font-size: 1rem;
   color: #663014;
 }
+
 .card p.student-more {
   font-size: 1rem;
 }
@@ -296,6 +313,17 @@ p.baseline {
   line-height: 2.25rem;
 }
 
+article.article-formation .container p {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Raleway";
+}
+@media screen and (min-width: 62em) {
+  article.article-formation .container p {
+    font-size: 1.5rem;
+  }
+}
+
 main {
   position: relative;
   z-index: 1;
@@ -340,6 +368,7 @@ footer,
 header.site-header {
   position: sticky;
   z-index: 999;
+  transition: 0.5s ease-in-out;
 }
 
 .site-header .container {
@@ -347,6 +376,8 @@ header.site-header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 @media screen and (min-width: 36em) {
   .site-header .container {
@@ -454,6 +485,11 @@ footer .container .social-menu {
   opacity: 0.5;
   z-index: -9;
 }
+@media (min-resolution: 144dpi) {
+  .jumbotron::before {
+    background-image: url("../img/macbook-bg-2x.jpg");
+  }
+}
 @media screen and (min-width: 75em) {
   .jumbotron::before {
     opacity: 1;
@@ -514,7 +550,7 @@ section.students .students-row {
   section.news .news-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 2rem;
+    column-gap: 1.8rem;
   }
 }
 
@@ -524,6 +560,21 @@ section.students .students-row {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
   }
+}
+
+.date-row {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.date-row svg {
+  margin-right: 0.25rem;
+}
+.date-row .date {
+  margin-left: 0.25rem;
 }
 
 .card {
@@ -545,20 +596,6 @@ section.students .students-row {
 }
 .card .card-content .read-more-container {
   margin-top: 1.5rem;
-}
-.card .card-content .date-row {
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-}
-.card .card-content .date-row svg {
-  margin-right: 0.25rem;
-}
-.card .card-content .date-row .date {
-  margin-left: 0.25rem;
 }
 .card .card-content .read-more-container {
   border-radius: 0px 0px 0.25rem 0.25rem;
@@ -662,13 +699,15 @@ section.students .students-row .student-card .student-content .student-more {
   text-decoration: underline;
 }
 
-P.baseline {
+article.article-formation .container p,
+p.baseline {
   text-align: left;
-  margin: 0 auto 2.5rem auto;
+  margin: 0 auto 2rem auto;
   max-width: 38.875rem;
 }
 @media screen and (min-width: 75em) {
-  P.baseline {
+  article.article-formation .container p,
+p.baseline {
     max-width: 52.5rem;
   }
 }
@@ -684,6 +723,132 @@ section.students-page {
 }
 section.students-page .container .student-more {
   color: #FD7E37;
+}
+
+section.jumbo-module {
+  background-image: url("../img/code.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-resolution: 144dpi) {
+  section.jumbo-module {
+    background-image: url("../img/code-2x.jpg");
+  }
+}
+section.jumbo-module .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 12.5rem;
+}
+@media screen and (min-width: 75em) {
+  section.jumbo-module .container {
+    height: 25rem;
+  }
+}
+
+section.students-page .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section.students-page .container img {
+  margin-bottom: 1.5rem;
+  max-width: 50%;
+}
+@media screen and (min-width: 36em) {
+  section.students-page .container img {
+    margin-bottom: 2.5rem;
+    max-width: 100%;
+  }
+}
+section.students-page .container ul.student-content-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 0;
+  row-gap: 1.5rem;
+}
+@media screen and (min-width: 48em) {
+  section.students-page .container ul.student-content-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+    row-gap: 2.5rem;
+  }
+  section.students-page .container ul.student-content-list li:nth-child(9) {
+    grid-column: 1/-1;
+  }
+}
+@media screen and (min-width: 75em) {
+  section.students-page .container ul.student-content-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1.5rem;
+  }
+}
+section.students-page .container ul.student-content-list h2.h3style {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 48em) {
+  section.students-page .container ul.student-content-list h2.h3style {
+    margin-bottom: 1.25rem;
+  }
+}
+section.students-page .container ul.student-content-list li:not(:nth-child(9)) {
+  text-align: center;
+}
+@media screen and (min-width: 48em) {
+  section.students-page .container ul.student-content-list li:not(:nth-child(9)) {
+    text-align: left;
+  }
+}
+
+article.article-wrapper .container {
+  max-width: 52.5rem;
+}
+article.article-wrapper .container .article-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+article.article-wrapper .container .article-header h1 {
+  line-height: 1em;
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 62em) {
+  article.article-wrapper .container .article-header h1 {
+    margin-bottom: 2.5rem;
+  }
+}
+article.article-wrapper .container .article-header picture {
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 62em) {
+  article.article-wrapper .container .article-header picture {
+    margin-bottom: 2.5rem;
+  }
+}
+article.article-wrapper .container .article-header .date-row {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 62em) {
+  article.article-wrapper .container .article-header .date-row {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.skip-links {
+  height: 0;
+  overflow: hidden;
+}
+
+.skip-links:focus-within {
+  height: auto;
 }
 
 [hidden] {
@@ -769,13 +934,6 @@ section.students-page .container .student-more {
     display: none;
   }
 
-  .main-header .container {
-    max-width: 48rem;
-    justify-content: space-between;
-    margin: auto;
-    padding: 0 2rem;
-  }
-
   .main-menu {
     position: static;
     flex-direction: row;
@@ -822,24 +980,141 @@ section.students-page .container .student-more {
   transition: ease-in-out 0.3s;
 }
 
+form.contact-form {
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 0;
+  justify-items: center;
+  row-gap: 1.5rem;
+}
+@media screen and (min-width: 36em) {
+  form.contact-form {
+    padding-top: 6rem;
+    row-gap: 3rem;
+  }
+}
+@media screen and (min-width: 48em) {
+  form.contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+form.contact-form .input-wrapper,
+form.contact-form .textarea-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+form.contact-form .input-wrapper label,
+form.contact-form .textarea-wrapper label {
+  margin-bottom: 1.25rem;
+}
+form.contact-form .input-wrapper input,
+form.contact-form .input-wrapper textarea,
+form.contact-form .textarea-wrapper input,
+form.contact-form .textarea-wrapper textarea {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 0.0625rem solid #707070;
+  outline: none;
+  padding-left: 1rem;
+  transition: ease-in-out 0.3s;
+}
+form.contact-form .input-wrapper input:hover, form.contact-form .input-wrapper input:focus,
+form.contact-form .input-wrapper textarea:hover,
+form.contact-form .input-wrapper textarea:focus,
+form.contact-form .textarea-wrapper input:hover,
+form.contact-form .textarea-wrapper input:focus,
+form.contact-form .textarea-wrapper textarea:hover,
+form.contact-form .textarea-wrapper textarea:focus {
+  border-left: 0.25rem #FD7E37 solid;
+  transition: ease-in-out 0.3s;
+}
+form.contact-form .input-wrapper input::placeholder,
+form.contact-form .input-wrapper textarea::placeholder,
+form.contact-form .textarea-wrapper input::placeholder,
+form.contact-form .textarea-wrapper textarea::placeholder {
+  font-style: italic;
+}
+form.contact-form .input-wrapper textarea,
+form.contact-form .textarea-wrapper textarea {
+  resize: none;
+  height: 14rem;
+}
+form.contact-form .textarea-wrapper {
+  grid-column: 1/-1;
+}
+@media screen and (min-width: 48em) {
+  form.contact-form .submit-wrapper {
+    grid-column: 2/3;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+}
+form.contact-form .submit-wrapper .submit-btn {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: solid 0.0625rem #FD7E37;
+  border-radius: 0.25rem;
+  background-color: #FD7E37;
+  color: #fff;
+  padding: 0.625rem 1.25rem;
+  font-weight: 500;
+  transition: ease-in-out 0.3s;
+}
+form.contact-form .submit-wrapper .submit-btn svg {
+  margin-left: 1rem;
+  transition: ease-in-out 0.3s;
+}
+form.contact-form .submit-wrapper .submit-btn svg g path.a {
+  fill: transparent;
+  stroke: #fff;
+  transition: ease-in-out 0.3s;
+}
+form.contact-form .submit-wrapper .submit-btn:hover, form.contact-form .submit-wrapper .submit-btn:focus {
+  color: #FD7E37;
+  transition: ease-in-out 0.3s;
+}
+form.contact-form .submit-wrapper .submit-btn:hover svg, form.contact-form .submit-wrapper .submit-btn:focus svg {
+  transform: rotate(180deg) scale(1.25);
+  transition: ease-in-out 0.3s;
+}
+form.contact-form .submit-wrapper .submit-btn:hover g path.a, form.contact-form .submit-wrapper .submit-btn:focus g path.a {
+  stroke: #FD7E37;
+}
+
 .logo {
   transition: transform 0.3s ease-in-out;
 }
 
 .logo:hover,
 .logo:focus {
-  transform: scale(1.25);
+  transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
 }
 
 section.jumbotron .container .jumbotron-msg-wrapper a,
-.menu-link {
+.menu-link,
+.submit-btn {
   position: relative;
   z-index: 1;
   transition: ease-in-out 0.3s;
 }
 section.jumbotron .container .jumbotron-msg-wrapper a::before,
-.menu-link::before {
+.menu-link::before,
+.submit-btn::before {
   content: "";
   z-index: -1;
   position: absolute;
@@ -852,13 +1127,17 @@ section.jumbotron .container .jumbotron-msg-wrapper a::before,
 }
 section.jumbotron .container .jumbotron-msg-wrapper a:hover, section.jumbotron .container .jumbotron-msg-wrapper a:focus,
 .menu-link:hover,
-.menu-link:focus {
+.menu-link:focus,
+.submit-btn:hover,
+.submit-btn:focus {
   color: #FD7E37;
   transition: ease-in-out 0.3s;
 }
 section.jumbotron .container .jumbotron-msg-wrapper a:hover::before, section.jumbotron .container .jumbotron-msg-wrapper a:focus::before,
 .menu-link:hover::before,
-.menu-link:focus::before {
+.menu-link:focus::before,
+.submit-btn:hover::before,
+.submit-btn:focus::before {
   width: 100%;
   transition: ease-in-out 0.3s;
 }

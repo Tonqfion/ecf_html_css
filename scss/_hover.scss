@@ -5,14 +5,15 @@
 
 .logo:hover,
 .logo:focus {
-  transform: scale(1.25);
+  transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
 }
 
 //Effets de hover & focus sur menu principal et sur jumbotron
 
 section.jumbotron .container .jumbotron-msg-wrapper a,
-.menu-link {
+.menu-link,
+.submit-btn {
   position: relative;
   z-index: 1;
   transition: ease-in-out 0.3s;
@@ -163,11 +164,12 @@ section.jumbotron .container .jumbotron-msg-wrapper a,
     &::before {
       box-shadow: 0 0 0 2rem $white;
       opacity: 1;
-    }      svg .a {
-        stroke: $orange;
-        fill: $orange;
-        transition: ease-in-out 0.2s;
-      }
+    }
+    svg .a {
+      stroke: $orange;
+      fill: $orange;
+      transition: ease-in-out 0.2s;
+    }
   }
 
   //   width: 3.5rem;

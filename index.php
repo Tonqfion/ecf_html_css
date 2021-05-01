@@ -19,7 +19,7 @@
 
 
 
-    <main>
+    <main id="main-content">
 
 
         <section class="jumbotron">

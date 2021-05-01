@@ -1,3 +1,13 @@
+//Skip links volés à Benoist haha !
+.skip-links {
+  height: 0;
+  overflow: hidden;
+}
+
+.skip-links:focus-within {
+  height: auto;
+}
+
 //Menu
 
 //Hidden state
@@ -17,7 +27,7 @@
 
 //Burger bars
 .toggle-menu span {
-    display:block;
+  display: block;
   width: 2.5rem;
   height: 0.3rem;
   background-color: $white;
@@ -48,7 +58,6 @@
     opacity 0.3s 0.001s ease-in-out;
 }
 
-
 //Desktop menu
 @include screen {
   .toggle-menu {
@@ -73,7 +82,6 @@
   transition: 0.3s ease-in-out;
 }
 
-
 .toggle .line1 {
   transform: rotate(-45deg) translate(-0.5rem, 0.6rem);
 }
@@ -87,12 +95,6 @@
 @media screen and (min-width: 48em) {
   .burger {
     display: none;
-  }
-  .main-header .container {
-    max-width: 48rem;
-    justify-content: space-between;
-    margin: auto;
-    padding: 0 2rem;
   }
 
   .main-menu {
@@ -108,37 +110,127 @@
   }
 }
 
-
-
 // Pagination
 
-
 .pagination {
-  @include flex-display(row,center,center);
-  margin:auto;
+  @include flex-display(row, center, center);
+  margin: auto;
 }
 
 .pagination a {
-  @include flex-display(column,center,center);
+  @include flex-display(column, center, center);
   text-align: center;
-  color:$orange;
-  width:1.875rem;
-  height:1.875rem;
-  border: .0625rem solid $orange;
-  border-radius: .3125rem;
-  margin-left:0.625rem;
-  margin-right:0.625rem;
-  transition:ease-in-out .3s;
-
+  color: $orange;
+  width: 1.875rem;
+  height: 1.875rem;
+  border: 0.0625rem solid $orange;
+  border-radius: 0.3125rem;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+  transition: ease-in-out 0.3s;
 }
 
 .pagination a.active {
   background-color: $orange;
-  color: $white
+  color: $white;
 }
 
 .pagination a:hover {
-  color:$white;
-  background-color:$orange;
-  transition:ease-in-out .3s;
+  color: $white;
+  background-color: $orange;
+  transition: ease-in-out 0.3s;
+}
+
+// formulaire
+
+form.contact-form {
+  padding-top: 2rem;
+  @include gridColumnRepeatLayout(1, 0);
+  justify-items: center;
+  row-gap: 1.5rem;
+  @include large-phone {
+    padding-top: 6rem;
+    row-gap: 3rem;
+  }
+  @include tablet {
+    @include gridColumnRepeatLayout(2, 2rem);
+  }
+  .input-wrapper,
+  .textarea-wrapper {
+    width: 100%;
+    @include flex-display(column, left, center);
+
+    label {
+      margin-bottom: 1.25rem;
+    }
+    input,
+    textarea {
+      border-left: none;
+      border-right: none;
+      border-top: none;
+      border-bottom: 0.0625rem solid $border-color;
+      outline: none;
+      padding-left: 1rem;
+      transition: ease-in-out 0.3s;
+      &:hover,
+      &:focus {
+        border-left: 0.25rem $orange solid;
+        transition: ease-in-out 0.3s;
+      }
+
+      &::placeholder {
+        font-style: italic;
+      }
+    }
+    textarea {
+      resize: none;
+      height: 14rem;
+    }
+  }
+  .textarea-wrapper {
+    grid-column: 1 / -1;
+  }
+
+  .submit-wrapper {
+    @include tablet {
+      grid-column: 2 / 3;
+      width: 100%;
+      @include flex-display(row, flex-end, flex-end);
+    }
+    .submit-btn {
+      cursor: pointer;
+      position: relative;
+      @include flex-display(row, center, center);
+      border: solid 0.0625rem $orange;
+      border-radius: 0.25rem;
+      background-color: $orange;
+      color: $white;
+      padding: 0.625rem 1.25rem;
+      font-weight: 500;
+      transition: ease-in-out 0.3s;
+      svg {
+        margin-left: 1rem;
+        transition: ease-in-out 0.3s;
+      }
+
+      svg g path.a {
+        fill: transparent;
+        stroke: $white;
+        transition: ease-in-out 0.3s;
+      }
+      &:hover,
+      &:focus {
+        color: $orange;
+        transition: ease-in-out 0.3s;
+
+        svg {
+          transform: rotate(180deg) scale(1.25);
+          transition: ease-in-out 0.3s;
+        }
+        g path.a {
+          stroke: $orange;
+        }
+      }
+    }
+  }
 }

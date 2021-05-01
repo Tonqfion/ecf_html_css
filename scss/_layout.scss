@@ -39,10 +39,13 @@ footer,
 header.site-header {
   position: sticky;
   z-index: 999;
+  transition: 0.5s ease-in-out;
 }
 
 .site-header .container {
   @include flex-display(row, center, space-between);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 
   //Ecrasement des paramètres de largeur du container du header sur un écran phone (sinon padding trop grand)
 
@@ -136,6 +139,9 @@ footer {
     height: 100%;
     content: "";
     background-image: url("../img/macbook-bg.jpg");
+    @include high-res-bg {
+      background-image: url("../img/macbook-bg-2x.jpg");
+    }
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -204,7 +210,7 @@ section.students .students-row {
 
 section.news .news-grid {
   @include screen {
-    @include gridColumnRepeatLayout(3, 2rem);
+    @include gridColumnRepeatLayout(3, 1.8rem);
   }
 }
 
@@ -215,6 +221,18 @@ section.modules .modules-grid {
 }
 
 // cards homepage et modules
+
+.date-row {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  @include flex-display(row, center, flex-start);
+  svg {
+    margin-right: 0.25rem;
+  }
+  .date {
+    margin-left: 0.25rem;
+  }
+}
 
 .card {
   margin: auto;
@@ -235,17 +253,6 @@ section.modules .modules-grid {
     }
     .read-more-container {
       margin-top: 1.5rem;
-    }
-    .date-row {
-      margin-top: 1.5rem;
-      margin-bottom: 1rem;
-      @include flex-display(row, center, flex-start);
-      svg {
-        margin-right: 0.25rem;
-      }
-      .date {
-        margin-left: 0.25rem;
-      }
     }
 
     .read-more-container {
@@ -338,35 +345,118 @@ section.students {
 
 // top wrapper (titles et baselines)
 
-
-P.baseline {
+article.article-formation .container p,
+p.baseline {
   text-align: left;
-  margin:0 auto 2.5rem auto;
+  margin: 0 auto 2rem auto;
   max-width: 38.875rem;
   @include screen {
-
     max-width: 52.5rem;
   }
 }
 
-
 h1.side-page {
-  margin-bottom:2.5rem;
+  margin-bottom: 2.5rem;
 }
-
 
 // modification spécifique page students
 
-
-
-
 section.students-page {
-  border:none;
-  color:$writing-dark;
+  border: none;
+  color: $writing-dark;
   background-color: $white;
   .container {
     .student-more {
-      color:$orange;
+      color: $orange;
+    }
+  }
+}
+
+// modif spécifique page Module HTML / CSS
+
+section.jumbo-module {
+  background-image: url("../img/code.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include high-res-bg {
+    background-image: url("../img/code-2x.jpg");
+  }
+  .container {
+    @include flex-display(column, center, center);
+    min-height: 12.5rem;
+    @include screen {
+      height: 25rem;
+    }
+  }
+}
+
+// Page student unique
+
+section.students-page .container {
+  @include flex-display(column, center, center);
+  img {
+    margin-bottom: 1.5rem;
+    max-width: 50%;
+    @include large-phone {
+      margin-bottom: 2.5rem;
+      max-width: 100%;
+    }
+  }
+  ul.student-content-list {
+    @include gridColumnRepeatLayout(1, 0);
+    row-gap: 1.5rem;
+    @include tablet {
+      @include gridColumnRepeatLayout(2, 1.5rem);
+      row-gap: 2.5rem;
+      li:nth-child(9) {
+        grid-column: 1 / -1;
+      }
+    }
+    @include screen {
+      @include gridColumnRepeatLayout(4, 1.5rem);
+    }
+    h2.h3style {
+      margin-bottom: 0;
+      @include tablet {
+        margin-bottom: 1.25rem;
+      }
+    }
+    li:not(:nth-child(9)) {
+      text-align: center;
+      @include tablet {
+        text-align: left;
+      }
+    }
+  }
+}
+
+// article unique (utilisé aussi pour legal php => politique de confidentialité)
+
+article.article-wrapper .container {
+  max-width: 52.5rem;
+  .article-header {
+    @include flex-display(column, center, center);
+    h1 {
+      line-height: 1em;
+      margin-bottom: 1.5rem;
+      @include large-tablet {
+        margin-bottom: 2.5rem;
+      }
+    }
+    picture {
+      margin-bottom: 1.5rem;
+      @include large-tablet {
+        margin-bottom: 2.5rem;
+      }
+    }
+
+    .date-row {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      @include large-tablet {
+        margin-bottom: 2.5rem;
+      }
     }
   }
 }
