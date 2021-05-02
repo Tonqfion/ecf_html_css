@@ -5,7 +5,7 @@
 
     <?php include("includes/head.php"); ?>
 
-    <title>Page d'accueil</title>
+    <title>DWWM - Accueil</title>
 </head>
 
 <body>

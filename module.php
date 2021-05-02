@@ -5,7 +5,7 @@
 
     <?php include("includes/head.php"); ?>
 
-    <title>Module HTML / CSS</title>
+    <title>DWWM - Module</title>
 </head>
 
 <body>

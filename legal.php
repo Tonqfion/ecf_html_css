@@ -5,7 +5,7 @@
 
     <?php include("includes/head.php"); ?>
 
-    <title>DWWM - Article</title>
+    <title>DWWM - Légal</title>
 </head>
 
 <body>

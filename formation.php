@@ -5,7 +5,7 @@
 
     <?php include("includes/head.php"); ?>
 
-    <title>La formation DWWM</title>
+    <title>DWWM - Formation</title>
 </head>
 
 <body>
